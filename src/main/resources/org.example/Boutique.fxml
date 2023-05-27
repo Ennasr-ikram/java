@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="473.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BoutiqueController">
+   <children>
+      <VBox layoutX="14.0" layoutY="90.0" prefHeight="232.0" prefWidth="247.0" spacing="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+            <TextField fx:id="TNom" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" />
+            <TextField fx:id="TAdr" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nb Vend " />
+            <TextField fx:id="TNbVend" />
+            <Text layoutX="10.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel" />
+            <TextField fx:id="TTel" layoutX="10.0" layoutY="187.0" />
+            <Text layoutX="10.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+            <TextField fx:id="TDescription" layoutX="10.0" layoutY="193.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="Table" layoutX="282.0" layoutY="108.0" onMouseClicked="#getData" prefHeight="258.0" prefWidth="415.0" AnchorPane.rightAnchor="14.666666666666742" AnchorPane.topAnchor="108.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="62.666685700416565" text="Boutique ID" />
+          <TableColumn fx:id="colNom" prefWidth="43.333343505859375" text="Nom" />
+            <TableColumn fx:id="colAdr" prefWidth="79.66668701171875" text="Adresse" />
+            <TableColumn fx:id="colNbVend" prefWidth="77.33334350585938" text="Nb Vend" />
+            <TableColumn fx:id="colTel" prefWidth="55.0" text="Tel" />
+            <TableColumn fx:id="colDesc" prefWidth="141.0" text="Description" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="34.0" layoutY="380.0" prefHeight="49.0" prefWidth="331.0">
+        <buttons>
+          <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveBoutique" text="Save" />
+            <Button fx:id="btnUpdate" layoutX="244.0" layoutY="20.0" mnemonicParsing="false" onAction="#updateBoutique" text="Update" />
+            <Button fx:id="btnDelete" layoutX="159.0" layoutY="20.0" mnemonicParsing="false" onAction="#deleteBoutique" text="Delete" />
+            <Button fx:id="btnClear" layoutX="73.0" layoutY="20.0" mnemonicParsing="false" onAction="#clearField" text="Clear" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="btnExportExcel" layoutX="513.0" layoutY="388.0" mnemonicParsing="false" onAction="#ExportToExcel" prefHeight="34.0" prefWidth="75.0" text="Export xlsx" />
+      <Button fx:id="btnImportExcel" layoutX="607.0" layoutY="388.0" mnemonicParsing="false" onAction="#ImportFromExcel" prefHeight="34.0" prefWidth="75.0" text="Import xlsx" />
+   </children>
+</AnchorPane>
